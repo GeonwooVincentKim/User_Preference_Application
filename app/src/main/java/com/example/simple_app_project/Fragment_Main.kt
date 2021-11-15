@@ -2,10 +2,12 @@ package com.example.simple_app_project
 
 import android.os.Bundle
 import android.os.Looper
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.fragment.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
@@ -42,6 +44,13 @@ class FragmentMain : Fragment() {
         handler.postDelayed({
 //            findNavController().navigate(R.id.action_fragment_Main_to_fragment_Information)
         }, 5000L)
+
+        val fragmentMainPage: ConstraintLayout = view.findViewById(R.id.fragmentMainPage)
+        fragmentMainPage.setOnClickListener {
+            Log.d("Clicked Fragment Main Page", "Go to Information Page")
+            handler.removeCallbacksAndMessages(null)
+            findNavController().navigate(R.id.action_fragment_Main_to_fragment_Information)
+        }
 
         return view
     }
