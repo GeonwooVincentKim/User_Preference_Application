@@ -4,4 +4,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="stringCustomList">Custom List</string>
     <string name="stringAllMenu">All Menu</string>
+    <string name="stringToDo">TODO</string>
+    <string name="stringTitleText_InformationPage">Title Text of Information List-View</string>
+    <string name="sringContextText">Context Text</string>
+    <string name="stringContextText">Context Text</string>
 </resources>
