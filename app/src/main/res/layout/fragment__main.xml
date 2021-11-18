@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fragmentMainPage"
-    tools:context=".FragmentMain">
+    tools:context=".Main">
 
     <TextView
         android:id="@+id/fragmentMainTitle"

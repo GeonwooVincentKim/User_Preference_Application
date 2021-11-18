@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragment_Main"
-        android:name="com.example.simple_app_project.FragmentMain"
+        android:name="com.example.simple_app_project.Main"
         android:label="fragment__main"
         tools:layout="@layout/fragment__main" >
         <action
@@ -16,9 +16,9 @@
     </fragment>
     <fragment
         android:id="@+id/fragment_Information"
-        android:name="com.example.simple_app_project.Fragment_Information"
+        android:name="com.example.simple_app_project.Information"
         android:label="fragment__information"
-        tools:layout="@layout/fragment__information" >
+        tools:layout="@layout/fragment_information" >
         <action
             android:id="@+id/action_fragment_Information_to_fragment_Main"
             app:destination="@id/fragment_Main" />
