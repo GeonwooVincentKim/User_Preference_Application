@@ -10,6 +10,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.simple_app_project.recycler_view.RecyclerAdapter
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -34,6 +37,10 @@ class Information : Fragment() {
         }
     }
 
+    private var images = mutableListOf<Int>()
+    private var titleText = mutableListOf<String>()
+    private var contextText = mutableListOf<String>()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -53,6 +60,10 @@ class Information : Fragment() {
             informationHandler.removeCallbacksAndMessages(null)
             findNavController().navigate(R.id.action_fragment_Information_to_fragment_Main)
         }
+
+        val recyclerViewInformationPage: RecyclerView = view.findViewById(R.id.recyclerViewInformationPage)
+        recyclerViewInformationPage.layoutManager = LinearLayoutManager(this.activity)
+        recyclerViewInformationPage.adapter = RecyclerAdapter()
 
         return view
     }
